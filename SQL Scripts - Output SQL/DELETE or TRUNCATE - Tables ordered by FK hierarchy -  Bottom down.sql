@@ -36,7 +36,7 @@ SELECT FKHierarchy, TblName FROM #tables_test WHERE SchemaName NOT IN ('ref','hs
 DROP TABLE IF EXISTS #tables
 DROP TABLE IF EXISTS #statements
 DROP TABLE IF EXISTS #table_list
-
+GO
 -- Expected list of tables minus exclusions
 SELECT CONCAT_WS('.',QUOTENAME(SCHEMA_NAME(schema_id)), QUOTENAME([name])) AS TableName INTO #table_list
 FROM sys.tables
